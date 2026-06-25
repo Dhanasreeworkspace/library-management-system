@@ -10,8 +10,7 @@
   "book",
   "issue_date",
   "due_date",
-  "status",
-  "amended_from"
+  "status"
  ],
  "fields": [
   {
@@ -46,23 +45,13 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Issued\nReturned"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Book Issue",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-06-24 15:01:07.240632",
+ "modified": "2026-06-25 14:24:57.356875",
  "modified_by": "Administrator",
  "module": "Library",
  "name": "Book Issue",

@@ -1,0 +1,175 @@
+{% extends "templates/web.html" %}
+
+{% block title %}
+Library Dashboard
+{% endblock %}
+
+{% block page_content %}
+
+<link rel="stylesheet" href="/assets/library_management/css/style.css">
+
+<div class="container">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>📚 Library</h2>
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">
+                <a href="/library-dashboard">🏠 Dashboard</a>
+            </li>
+
+            <li>
+                <a href="/members">👤 Members</a>
+            </li>
+
+            <li>
+                <a href="/books">📖 Books</a>
+            </li>
+
+            <li>
+                <a href="/issue-book">📕 Issue Book</a>
+            </li>
+
+            <li>
+                <a href="/return-book">📗 Return Book</a>
+            </li>
+
+            <li>
+                <a href="/overdue-report">📄 Overdue Report</a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <h1>Library Dashboard</h1>
+
+            <input
+                type="text"
+                placeholder="Search Books, Members..."
+                class="search"
+            >
+
+        </header>
+
+        <section class="cards">
+
+            <div class="card">
+
+                <h3>Total Books</h3>
+
+                <h1 id="totalBooks">0</h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Available Books</h3>
+
+                <h1 id="availableBooks">0</h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Issued Books</h3>
+
+                <h1 id="issuedBooks">0</h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Total Members</h3>
+
+                <h1 id="members">0</h1>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Overdue Books</h3>
+
+                <h1 id="overdueBooks">0</h1>
+
+            </div>
+
+        </section>
+
+        <section class="tables">
+
+            <div class="table-card">
+
+                <h2>Recently Issued Books</h2>
+
+                <table id="issuedTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Book</th>
+
+                            <th>Member</th>
+
+                            <th>Issue Date</th>
+
+                            <th>Due Date</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="table-card">
+
+                <h2>Recently Added Books</h2>
+
+                <table id="booksTable">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Book</th>
+
+                            <th>Author</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="/assets/library_management/js/dashboard.js"></script>
+
+{% endblock %}
